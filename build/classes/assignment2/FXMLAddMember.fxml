@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.FXMLAddMemberController">
+   <children>
+      <Label layoutX="22.0" layoutY="32.0" prefHeight="21.0" prefWidth="94.0" text="First Name" />
+      <TextField fx:id="txtFName" layoutX="105.0" layoutY="27.0" prefHeight="31.0" prefWidth="163.0" />
+      <Label layoutX="22.0" layoutY="75.0" prefHeight="21.0" prefWidth="94.0" text="Last Name" />
+      <TextField fx:id="txtLName" layoutX="105.0" layoutY="70.0" prefHeight="31.0" prefWidth="163.0" />
+      <Button layoutX="90.0" layoutY="161.0" mnemonicParsing="false" onAction="#addMember" text="Add Member" />
+      <Label fx:id="lblDelete" layoutX="24.0" layoutY="336.0" prefHeight="31.0" prefWidth="342.0" textFill="#ee0b0b" />
+      <Button layoutX="694.0" layoutY="545.0" mnemonicParsing="false" onAction="#exit" text="  Exit&gt;&gt;" />
+      <Label fx:id="lblMsg" layoutX="20.0" layoutY="106.0" prefHeight="43.0" prefWidth="248.0" textFill="#1206ff" />
+      <TextArea fx:id="txtAreaDisp" layoutX="289.0" layoutY="23.0" prefHeight="338.0" prefWidth="497.0" />
+      <Label layoutX="6.0" layoutY="367.0" prefHeight="21.0" prefWidth="265.0" />
+      <HBox layoutX="3.0" layoutY="206.0" prefHeight="31.0" prefWidth="265.0">
+         <children>
+            <Button fx:id="btnFindMember" mnemonicParsing="false" onAction="#findMember" prefHeight="31.0" prefWidth="117.0" text="Find Member" />
+            <Region prefHeight="31.0" prefWidth="17.0" />
+            <TextField fx:id="txtFindMember" prefHeight="31.0" prefWidth="134.0" promptText="Member Id" />
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="268.0" prefHeight="31.0" prefWidth="265.0">
+         <children>
+            <Button fx:id="btnDetailView" mnemonicParsing="false" onAction="#viewDetails" prefHeight="31.0" prefWidth="110.0" text="View Details" />
+            <Region prefHeight="31.0" prefWidth="30.0" />
+            <TextField fx:id="txtViewDetails" prefHeight="31.0" prefWidth="138.0" promptText="Member Id" />
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="330.0" prefHeight="31.0" prefWidth="265.0">
+         <children>
+            <Button fx:id="btnDelMember" mnemonicParsing="false" onAction="#deleteMember" prefHeight="31.0" prefWidth="123.0" text="Delete Member" />
+            <Region prefHeight="31.0" prefWidth="11.0" />
+            <TextField fx:id="txtDelId" prefHeight="31.0" prefWidth="131.0" promptText="Member Id" />
+         </children>
+      </HBox>
+      <HBox layoutY="400.0" prefHeight="31.0" prefWidth="787.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Bloom threshold="1.0" />
+         </effect>
+         <children>
+            <Button fx:id="btnAddWins" mnemonicParsing="false" onAction="#addWins" text="Add Win" />
+            <TextField fx:id="txtAddWins" prefHeight="31.0" prefWidth="125.0" promptText="Enter The Player Id" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Region prefHeight="31.0" prefWidth="24.0" />
+            <Button fx:id="btnAddLoss" mnemonicParsing="false" onAction="#addLoss" prefHeight="31.0" prefWidth="138.0" text="Add Loss" />
+            <TextField fx:id="txtAddLoss" prefHeight="31.0" prefWidth="125.0" promptText="Enter The Player Id" />
+            <Separator layoutX="240.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Region prefHeight="31.0" prefWidth="24.0" />
+            <Button fx:id="btnAddDraw" mnemonicParsing="false" onAction="#addDraw" prefHeight="31.0" prefWidth="138.0" text="Add Draw" />
+            <TextField fx:id="txtAddDraw" prefHeight="31.0" prefWidth="125.0" promptText="Enter The Player Id" />
+         </children>
+      </HBox>
+      <HBox layoutY="468.0" prefHeight="47.0" prefWidth="759.0">
+         <children>
+            <Button fx:id="btnBestPlayer" mnemonicParsing="false" onAction="#getBestPlayer" prefHeight="43.0" prefWidth="120.0" text="Get Best Player" />
+            <Label fx:id="lblBestPlayer" prefHeight="47.0" prefWidth="260.0" />
+            <Button fx:id="btnGetHighest" mnemonicParsing="false" onAction="#getHighest" prefHeight="43.0" prefWidth="147.0" text="Get Highest Scorer" />
+            <Label fx:id="lblHighest" prefHeight="47.0" prefWidth="260.0" />
+         </children>
+      </HBox>
+      <Label fx:id="lblMemberInfo" layoutX="1.0" layoutY="239.0" prefHeight="21.0" prefWidth="265.0" textFill="#0c14f2" />
+      <Label fx:id="lblViewDetails" layoutX="1.0" layoutY="299.0" prefHeight="21.0" prefWidth="265.0" textFill="#0c14f2" />
+   </children>
+</AnchorPane>
